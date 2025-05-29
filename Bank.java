@@ -61,15 +61,61 @@ class Bank_acc_form implements Person{
         System.out.println("Account Holders Bank Balance:"+balance);
     }
 }
-class deposit extends Bank_acc_form{
+class Deposit extends Bank_acc_form{
     private int deposit_amount;
-    public deposit(){
-
+    private int new_balance;
+    public Deposit(){
+        super();
+        this.deposit_amount=0;
+    }
+    public void Input_Deposit(Scanner sc){
+        System.out.println("Enter the amount you want to Deposit:");
+        deposit_amount=sc.nextInt();
+    }
+    public void Depositing_Process(){
+        new_balance=balance+deposit_amount;
+    }
+    public void Deposit_limit(){
+        if(deposit_amount<=1000000){
+            Depositing_Process();
+        }
+        else{
+            System.out.println("Daily limit is Completed");
+        }
+    }
+    public void Deposit_Messgae(){
+        System.out.println("Your Initial balance was "+balance+" after adding deposit amount "+deposit_amount+" the current balance is: "+new_balance);
+    }
+}
+class Withdraw extends Bank_acc_form{
+    private int withdraw_amount;
+    private int new_balance;
+    public Withdraw(){
+        super();
+        this.withdraw_amount=0;
+    }
+    public void Input_Withdraw(Scanner sc){
+        System.out.println("Enter the amount you want to withdraw:");
+        withdraw_amount=sc.nextInt();
+    }
+    public void Withdrawing_Process(){
+        new_balance=balance-withdraw_amount;
+    }
+    public void Deposit_limit(){
+        if(withdraw_amount<=balance){
+            Withdrawing_Process();
+        }
+        else{
+            System.out.println("Daily limit is Completed");
+        }
+    }
+    public void Withdraw_Messgae(){
+        System.out.println("Your Initial balance was "+balance+" after adding deposit amount "+withdraw_amount+" the current balance is: "+new_balance);
     }
 }
 public class Bank{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-
+        
     }
 }
