@@ -114,8 +114,23 @@ class Withdraw extends Bank_acc_form{
     }
 }
 public class Bank{
+    public static void Option(Scanner sc){
+        System.out.println("Enter the choice:");
+        System.out.println("\n Options:");
+        System.out.println("1. Create Account");
+        System.out.println("2. Deposit Money");
+        System.out.println("3. Withdraw Money");
+        System.out.println("4. Display Details");
+        int choice=sc.nextInt();
+        Bank_acc_form[] ba=new Bank_acc_form[20];
+        ba[]=new Bank_acc_form();
+        switch (choice){
+            case 1:
+
+        }
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        
+
     }
 }
