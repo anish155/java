@@ -51,7 +51,7 @@ class Admin implements  Person{
     }
    public void Store_admin() {
     try {
-        FileWriter writer = new FileWriter("Admin.txt", true); // append mode
+        FileWriter writer = new FileWriter("12-06-2025/Admin.txt", true); // append mode
         writer.write(name + "," + address + "," + phone + "," + pin + "\n"); // CSV line
         writer.close();
         System.out.println("Admin data stored successfully.");
@@ -71,7 +71,7 @@ class Login_Admin extends Admin{
     }
     public boolean login(String inputName, int inputPin) {
     try {
-        File file = new File("Admin.txt");
+        File file = new File("12-06-2025/Admin.txt");
         Scanner reader = new Scanner(file);
         while (reader.hasNextLine()) {
             String line = reader.nextLine();
@@ -95,7 +95,7 @@ class Login_Admin extends Admin{
 }
 
 }
-public class Student_system {
+public class Login {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         Admin admin=new Admin();

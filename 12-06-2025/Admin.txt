@@ -1,5 +1,2 @@
-Name: rahul
-Address: kamaladi
-Phone: 9761722345
-Pin:1234
-----------------------------
+kamal,kamaladi,9429825625,4567
+anish,kalanki,9761722345,1234
